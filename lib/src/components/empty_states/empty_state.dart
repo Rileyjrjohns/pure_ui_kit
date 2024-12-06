@@ -4,14 +4,30 @@ import 'package:pure_ui_kit/src/theme/pure_theme.dart';
 import 'package:pure_ui_kit/src/utils/constants.dart';
 import 'package:pure_ui_kit/src/utils/painters/dashed_border_painter.dart';
 
+/// A widget that displays an empty state with various configurations.
+///
+/// This widget can be used to show a placeholder when there's no content,
+/// or to create a call-to-action area.
 class PureEmptyState extends StatelessWidget {
+  /// The title text to display in the empty state.
   final String? title;
+
+  /// Optional description text providing more context.
   final String? description;
+
+  /// Text to display on the action button.
   final String? buttonText;
+
+  /// Callback function when the empty state is pressed.
   final VoidCallback? onPressed;
+
+  /// Custom icon widget to display instead of the default icon.
   final Widget? icon;
+
+  /// Whether to show a dashed border around the empty state.
   final bool withDashedBorder;
 
+  /// Creates a simple empty state with optional title, description, and action button.
   const PureEmptyState.simple({
     super.key,
     this.title,
@@ -21,6 +37,7 @@ class PureEmptyState extends StatelessWidget {
     this.icon,
   }) : withDashedBorder = false;
 
+  /// Creates an empty state with a dashed border, typically used for drop zones.
   const PureEmptyState.withDashedBorder({
     super.key,
     this.title,
