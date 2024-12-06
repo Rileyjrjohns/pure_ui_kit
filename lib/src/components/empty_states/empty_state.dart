@@ -12,8 +12,42 @@ class PureEmptyState extends StatelessWidget {
   /// The title text to display in the empty state.
   final String? title;
 
+  /// Defines the text style for the title.
+  /// 
+  /// Use this property to customize the appearance of the title, 
+  /// such as font size, weight, color, or other text styling options.
+  /// 
+  /// If not provided, a default style will be applied.
+  /// 
+  /// Example:
+  /// ```dart
+  /// titleStyle: TextStyle(
+  ///   fontSize: 18,
+  ///   fontWeight: FontWeight.bold,
+  ///   color: Colors.blue,
+  /// ),
+  /// ```
+  final TextStyle? titleStyle;
+
   /// Optional description text providing more context.
   final String? description;
+
+  /// Defines the text style for the description.
+  /// 
+  /// Use this property to customize the appearance of the description, 
+  /// such as font size, weight, color, or other text styling options.
+  /// 
+  /// If not provided, a default style will be applied.
+  /// 
+  /// Example:
+  /// ```dart
+  /// descriptionStyle: TextStyle(
+  ///   fontSize: 18,
+  ///   fontWeight: FontWeight.bold,
+  ///   color: Colors.blue,
+  /// ),
+  /// ```
+  final TextStyle? descriptionStyle;
 
   /// Text to display on the action button.
   final String? buttonText;
@@ -31,7 +65,9 @@ class PureEmptyState extends StatelessWidget {
   const PureEmptyState.simple({
     super.key,
     this.title,
+    this.titleStyle,
     this.description,
+    this.descriptionStyle,
     this.buttonText,
     this.onPressed,
     this.icon,
@@ -41,7 +77,9 @@ class PureEmptyState extends StatelessWidget {
   const PureEmptyState.withDashedBorder({
     super.key,
     this.title,
+    this.titleStyle,
     this.description,
+    this.descriptionStyle,
     this.buttonText,
     this.onPressed,
     this.icon,
@@ -80,7 +118,7 @@ class PureEmptyState extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 title ?? '',
-                style: theme.titleStyle ??
+                style: titleStyle ?? theme.titleStyle ??
                     const TextStyle(
                       fontFamily: 'inter',
                       color: gray900,
@@ -111,7 +149,7 @@ class PureEmptyState extends StatelessWidget {
         if (title != null)
           Text(
             title!,
-            style: theme.titleStyle ??
+            style: titleStyle ?? theme.titleStyle ??
                 const TextStyle(
                   fontFamily: 'inter',
                   color: gray900,
@@ -124,7 +162,7 @@ class PureEmptyState extends StatelessWidget {
             padding: const EdgeInsets.only(top: 4),
             child: Text(
               description!,
-              style: theme.descriptionStyle ??
+              style: descriptionStyle ?? theme.descriptionStyle ??
                   const TextStyle(
                     fontFamily: 'inter',
                     color: gray500,
