@@ -2,7 +2,7 @@
 
 A Flutter UI kit inspired by Tailwind CSS, providing elegant and customizable components for your applications.
 
-![Empty State Simple](assets/images/empty_state_simple.png)
+
 
 ## Features
 
@@ -10,6 +10,9 @@ Pure UI Kit currently offers:
 
 - Elegant and customizable "Empty State" components
   - Simple version with title, description, and action button
+
+![Empty State Simple](assets/images/empty_state_simple.png)
+
   - Dashed border version for drop zones or add areas
 
 ![Empty State with Dashed Border](assets/images/empty_state_dashed.png)
@@ -92,5 +95,5 @@ Contributions are welcome! Feel free to:
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the BSD 3-Clause License - see the [LICENSE](LICENSE) file for details.
 
