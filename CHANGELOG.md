@@ -40,3 +40,11 @@ Documentation:
 - Fix deprecated use of withOpacity
 - Format code according to dart standards
 - Improve static analysis score
+
+## 0.1.2
+
+🔧 Bug fixes and improvements
+- Fix deprecated use of Color properties (red, green, blue)
+- Replace Color manipulation with bitwise operations
+- Format code according to dart standards
+- Improve static analysis score

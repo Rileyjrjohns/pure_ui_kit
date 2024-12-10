@@ -143,9 +143,9 @@ class PureStep extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             color: Color.fromRGBO(
-              activeColor.red,
-              activeColor.green,
-              activeColor.blue,
+              activeColor.value >> 16 & 0xFF, // R
+              activeColor.value >> 8 & 0xFF, // G
+              activeColor.value & 0xFF, // B
               0.2,
             ),
           ),
