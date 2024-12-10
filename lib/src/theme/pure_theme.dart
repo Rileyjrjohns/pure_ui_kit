@@ -29,6 +29,7 @@ class PureTheme extends InheritedWidget {
 
   @override
   bool updateShouldNotify(PureTheme oldWidget) {
-    return emptyStateTheme != oldWidget.emptyStateTheme || stepTheme != oldWidget.stepTheme;
+    return emptyStateTheme != oldWidget.emptyStateTheme ||
+        stepTheme != oldWidget.stepTheme;
   }
 }

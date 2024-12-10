@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pure_ui_kit/pure_ui_kit.dart';
+// ignore: implementation_imports
 import 'package:pure_ui_kit/src/components/steps/step.dart';
 
 void main() {
@@ -64,7 +65,8 @@ class DemoPage extends StatelessWidget {
                 buttonText: 'Nouveau Projet',
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Création d\'un nouveau projet')),
+                    const SnackBar(
+                        content: Text('Création d\'un nouveau projet')),
                   );
                 },
               ),
@@ -82,7 +84,9 @@ class DemoPage extends StatelessWidget {
                 title: 'Créer une nouvelle base de données',
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Création d\'une nouvelle base de données')),
+                    const SnackBar(
+                        content:
+                            Text('Création d\'une nouvelle base de données')),
                   );
                 },
               ),

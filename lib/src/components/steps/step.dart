@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:heroicons/heroicons.dart';
 import 'package:pure_ui_kit/src/theme/pure_theme.dart';
 import 'package:pure_ui_kit/src/theme/step_theme.dart';
-import 'package:pure_ui_kit/src/utils/constants.dart';
 
 enum StepType {
   bullet,
@@ -70,7 +68,7 @@ class PureStep extends StatelessWidget {
   Widget _buildBulletStep() {
     return Builder(builder: (context) {
       final theme = PureTheme.stepThemeOf(context);
-      final defaultTheme = PureStepTheme.defaultTheme;
+      const defaultTheme = PureStepTheme.defaultTheme;
 
       final activeColor = theme.activeColor ?? defaultTheme.activeColor!;
       final inactiveColor = theme.inactiveColor ?? defaultTheme.inactiveColor!;
@@ -144,7 +142,12 @@ class PureStep extends StatelessWidget {
           height: dotSize * 2,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: activeColor.withOpacity(0.2),
+            color: Color.fromRGBO(
+              activeColor.red,
+              activeColor.green,
+              activeColor.blue,
+              0.2,
+            ),
           ),
         ),
         Container(
@@ -162,7 +165,7 @@ class PureStep extends StatelessWidget {
   Widget _buildCircleStep() {
     return Builder(builder: (context) {
       final theme = PureTheme.stepThemeOf(context);
-      final defaultTheme = PureStepTheme.defaultTheme;
+      const defaultTheme = PureStepTheme.defaultTheme;
 
       final circleSize = theme.circleSize ?? defaultTheme.circleSize!;
       final lineWidth = theme.lineWidth ?? defaultTheme.lineWidth!;
@@ -227,7 +230,7 @@ class PureStep extends StatelessWidget {
   Widget _buildProgressBar() {
     return Builder(builder: (context) {
       final theme = PureTheme.stepThemeOf(context);
-      final defaultTheme = PureStepTheme.defaultTheme;
+      const defaultTheme = PureStepTheme.defaultTheme;
 
       final activeColor = theme.activeColor ?? defaultTheme.activeColor!;
       final inactiveColor = theme.inactiveColor ?? defaultTheme.inactiveColor!;

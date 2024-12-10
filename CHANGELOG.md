@@ -33,3 +33,10 @@ Documentation:
 - Add step components documentation to README
 - Add theme customization examples
 - Add code examples for all step types
+
+## 0.1.1
+
+🔧 Bug fixes and improvements
+- Fix deprecated use of withOpacity
+- Format code according to dart standards
+- Improve static analysis score

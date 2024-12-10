@@ -1,6 +1,6 @@
 name: pure_ui_kit
 description: "A Flutter UI kit inspired by Tailwind CSS, providing elegant and customizable components. Currently includes Empty State components with more components coming soon."
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/Rileyjrjohns/pure_ui_kit
 repository: https://github.com/Rileyjrjohns/pure_ui_kit
 

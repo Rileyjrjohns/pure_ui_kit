@@ -34,7 +34,7 @@ Add Pure UI Kit to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  pure_ui_kit: ^0.1.0
+  pure_ui_kit: ^0.1.1
 ```
 
 ## Usage
