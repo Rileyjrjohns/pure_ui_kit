@@ -19,3 +19,17 @@ Documentation:
 
 Improves code readability and pub.dev score by adding
 comprehensive API documentation.
+
+## 0.1.0
+
+✨ Add Step components with theme support
+- Add three types of step indicators: bullet, circle, and progress bar
+- Implement PureStepTheme for customization
+- Add support for completed, current and upcoming states
+- Add tap callback support for step navigation
+- Add progress bar with label support
+
+Documentation:
+- Add step components documentation to README
+- Add theme customization examples
+- Add code examples for all step types
