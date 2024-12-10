@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pure_ui_kit/pure_ui_kit.dart';
+import 'package:pure_ui_kit/src/components/steps/step.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,9 +43,9 @@ class DemoPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Pure UI Kit Demo'),
       ),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
+      body: SafeArea(
+        minimum: const EdgeInsets.all(16),
+        child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -85,6 +86,65 @@ class DemoPage extends StatelessWidget {
                   );
                 },
               ),
+              const SizedBox(height: 48),
+              const Text(
+                'Step Bullet',
+                style: TextStyle(
+                  fontFamily: 'inter',
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 16),
+              PureStep.bullet(
+                currentStep: 2,
+                totalSteps: 4,
+                onStepTap: (step) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Tapped on step $step')),
+                  );
+                },
+              ),
+              const SizedBox(height: 48),
+              const Text(
+                'Step Circle',
+                style: TextStyle(
+                  fontFamily: 'inter',
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 16),
+              PureStep.circle(
+                currentStep: 4,
+                totalSteps: 5,
+                onStepTap: (step) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Tapped on step $step')),
+                  );
+                },
+              ),
+              const SizedBox(height: 48),
+              const Text(
+                'Step Progress Bar',
+                style: TextStyle(
+                  fontFamily: 'inter',
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 16),
+              PureStep.progressBar(
+                currentStep: 3,
+                totalSteps: 4,
+                progressLabel: 'Migrating MySQL database...',
+                onStepTap: (step) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Tapped on step $step')),
+                  );
+                },
+              ),
+              const SizedBox(height: 48),
             ],
           ),
         ),

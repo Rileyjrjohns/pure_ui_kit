@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 // COLORS
+const Color gray200 = Color(0xFFe5e7eb);
 const Color gray500 = Color(0xFF6b7280);
 const Color gray900 = Color(0xFF111827);
 

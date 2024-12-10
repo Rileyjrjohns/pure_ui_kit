@@ -2,8 +2,6 @@
 
 A Flutter UI kit inspired by Tailwind CSS, providing elegant and customizable components for your applications.
 
-
-
 ## Features
 
 Pure UI Kit currently offers:
@@ -16,6 +14,19 @@ Pure UI Kit currently offers:
   - Dashed border version for drop zones or add areas
 
 ![Empty State with Dashed Border](assets/images/empty_state_dashed.png)
+
+- Steps
+  - Bullet step indicators
+
+![Step Bullet](assets/images/step_bullet.png)
+
+  - Circle step indicators
+
+![Step Circle](assets/images/step_circle.png)
+
+  - Progress bar step indicators
+
+![Step Progress Bar](assets/images/step_progress_bar.png)
 
 ## Installation
 
@@ -51,6 +62,79 @@ PureEmptyState.withDashedBorder(
   },
 );
 ```
+
+### Steps
+
+Pure UI Kit provides three types of step indicators: bullet, circle, and progress bar.
+
+#### Basic Usage
+
+```dart
+// Bullet Step
+PureStep.bullet(
+  currentStep: 2,
+  totalSteps: 4,
+  onStepTap: (step) {
+    print('Tapped on step $step');
+  },
+);
+
+// Circle Step
+PureStep.circle(
+  currentStep: 3,
+  totalSteps: 5,
+  onStepTap: (step) {
+    print('Tapped on step $step');
+  },
+);
+
+// Progress Bar Step
+PureStep.progressBar(
+  currentStep: 2,
+  totalSteps: 4,
+  progressLabel: 'Processing...',
+  onStepTap: (step) {
+    print('Tapped on step $step');
+  },
+);
+```
+
+#### Customization
+
+You can customize the appearance of steps using `PureStepTheme`:
+
+```dart
+PureTheme(
+  stepTheme: const PureStepTheme(
+    activeColor: Colors.blue,
+    inactiveColor: Colors.grey,
+    completedColor: Colors.blue,
+    lineWidth: 60,
+    lineHeight: 1.5,
+    circleSize: 24,
+    dotSize: 6,
+    spacing: 8,
+    labelStyle: TextStyle(
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+    ),
+  ),
+  child: MaterialApp(
+    // Your application
+  ),
+);
+```
+
+Available properties:
+- `activeColor`: Color for the current step
+- `inactiveColor`: Color for upcoming steps
+- `completedColor`: Color for completed steps
+- `lineWidth`: Width of connecting lines (circle step)
+- `lineHeight`: Height of connecting lines and progress bar
+- `circleSize`: Size of circle indicators
+- `dotSize`: Size of bullet indicators
+- `spacing`: Space between elements
+- `labelStyle`: Text style for labels
 
 ### Theme Customization
 
